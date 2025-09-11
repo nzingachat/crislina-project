@@ -57,9 +57,7 @@ async function loadVehicles() {
                 <div class="col-12">
                     <div class="card">
                         <div class="card-body">
-                            <div id="vehiclesTable">
-                                <!-- Table will be loaded here -->
-                            </div>
+                            <div id="vehiclesTable"></div>
                         </div>
                     </div>
                 </div>
@@ -117,6 +115,22 @@ async function loadVehicles() {
     await loadVehiclesData();
     setupVehicleForm();
 }
+
+// Modal Helpers using Bootstrap API
+function showModal(modalId) {
+    const modalEl = document.getElementById(modalId);
+    const modal = new bootstrap.Modal(modalEl, { backdrop: 'static', keyboard: true });
+    modal.show();
+}
+
+function hideModal(modalId) {
+    const modalEl = document.getElementById(modalId);
+    const modal = bootstrap.Modal.getInstance(modalEl);
+    if (modal) modal.hide();
+}
+
+// --- Rest of your code (loadVehiclesData, renderVehiclesTable, filterVehicles, searchVehicles, editVehicle, deleteVehicle, setupVehicleForm) remains the same ---
+
 
 async function loadVehiclesData() {
     showLoading(true);
