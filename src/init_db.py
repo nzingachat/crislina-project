@@ -60,11 +60,11 @@ def init_database():
         # --- Criação da Frota de Veículos ---
         # Dados localizados para Angola (modelos e matrículas)
         vehicles = [
-            Vehicle(reg_no='LD-12-34-AB', model='Toyota Hilux', fuel_type='gasóleo', status='active'),
-            Vehicle(reg_no='BE-56-78-CD', model='Ford Ranger', fuel_type='gasóleo', status='active'),
-            Vehicle(reg_no='LA-90-12-EF', model='Kia Rio', fuel_type='gasolina', status='active'),
-            Vehicle(reg_no='LU-34-56-GH', model='Hyundai i10', fuel_type='gasolina', status='maintenance'),
-            Vehicle(reg_no='CA-78-90-IJ', model='Suzuki Swift', fuel_type='gasolina', status='active')
+            Vehicle(reg_no='LD-12-34-AB', model='Toyota Hilux', fuel_type='petrol', status='active'),
+            Vehicle(reg_no='BE-56-78-CD', model='Ford Ranger', fuel_type='diesel', status='active'),
+            Vehicle(reg_no='LA-90-12-EF', model='Kia Rio', fuel_type='electric', status='active'),
+            Vehicle(reg_no='LU-34-56-GH', model='Hyundai i10', fuel_type='diesel', status='maintenance'),
+            Vehicle(reg_no='CA-78-90-IJ', model='Suzuki Swift', fuel_type='petrol', status='active')
         ]
         db.session.add_all(vehicles)
         
